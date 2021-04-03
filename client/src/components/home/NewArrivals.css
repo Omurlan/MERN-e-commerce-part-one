@@ -1,0 +1,22 @@
+.pagination-block {
+    text-align: center;   
+    box-sizing: border-box;
+}
+
+.pagination-button {
+    background-color: rgb(226, 226, 226);
+    border: 1px solid transparent;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.pagination-button:hover {
+    border: 1px solid green;
+    background-color: rgb(223, 223, 223);
+}
+
+.pagination-button.clicked {
+    border: 1px solid green;
+}
