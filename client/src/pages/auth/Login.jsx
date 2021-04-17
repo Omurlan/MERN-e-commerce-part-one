@@ -8,8 +8,8 @@ import { Link } from 'react-router-dom'
 import { createOrUpdateUser } from '../../functions/auth'
 
 function Login({ history }) {
-    const [email, setEmail] = useState('yundon2002@gmail.com')
-    const [password, setPassword] = useState('omurlan2002')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
     const [loading, setLoading] = useState(false)
 
     const { user } = useSelector((state) => ({ ...state }))
@@ -131,6 +131,7 @@ function Login({ history }) {
                 block
                 shape="round"
                 icon={<GoogleOutlined />}
+                disabled={!email || password.length < 6}
                 size="large"
             >
                 Login with Email/Password
@@ -157,7 +158,6 @@ function Login({ history }) {
                         shape="round"
                         icon={<MailOutlined />}
                         size="large"
-                        disabled={!email || password.length < 6}
                     >
                         Login with Google
                     </Button>
